@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1524688872 source:c:\users\jaque\desktop\c practicas\trabajo practico 2\estructuras.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"estructuras.h"
+
+1524689758 c:\users\jaque\desktop\c practicas\trabajo practico 2\estructuras.h
+
+1524689758 source:c:\users\jaque\desktop\c practicas\trabajo practico 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"estructuras.h"
+
+1524763693 source:c:\users\jaque\desktop\trabajo practico 2\estructuras.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"estructuras.h"
+
+1524763545 c:\users\jaque\desktop\trabajo practico 2\estructuras.h
+
+1524768936 source:c:\users\jaque\desktop\trabajo practico 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"estructuras.h"
+
