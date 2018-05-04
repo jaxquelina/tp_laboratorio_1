@@ -31,3 +31,25 @@
 	<string.h>
 	"estructuras.h"
 
+1524758138 source:c:\users\jaque\desktop\trabajo practico 2 corregido\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"estructuras.h"
+
+1524752746 c:\users\jaque\desktop\trabajo practico 2 corregido\estructuras.h
+
+1525409038 source:c:\users\jaque\desktop\trabajo practico 2 corregido\estructuras.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"estructuras.h"
+
+1525407706 source:c:\users\jaque\desktop\trabajo practico 2 corregido\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+

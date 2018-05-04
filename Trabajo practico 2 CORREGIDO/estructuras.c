@@ -91,6 +91,12 @@ void altaPersona(struct Epersona gente[], int cantidad)
     int indice;
     int esta;
     long long int DNI;
+    char dniAuxStr[50];
+    char nombreAux[50];
+    char Auxnombre[50];
+    char edadAuxStr[50];
+    char nombre[50];
+    int letras;
 
     system("cls");
     printf("---Alta Persona--\n\n");
@@ -103,8 +109,23 @@ void altaPersona(struct Epersona gente[], int cantidad)
     }
     else
     {
-        printf("Ingrese DNI: ");
-        scanf("%lld", &DNI);
+       if (!getStringNumeros("Ingrese el Dni: ",dniAuxStr))
+        {
+
+            printf ("El dni debe ser numerico\n");
+
+                while(!getStringNumeros("Reingrese el Dni: ",dniAuxStr))
+                  {
+                      printf("NO INGRESE LETRAS ");
+
+                  }
+
+
+       }
+
+
+
+        DNI = atoi(dniAuxStr);
 
         esta = buscarPersona(gente,cantidad,DNI);
 
@@ -112,27 +133,44 @@ void altaPersona(struct Epersona gente[], int cantidad)
         {
             printf("\nEl DNI %lld ya esta dado de alta en el sistema\n", DNI);
                    mostrarPersona(gente[esta]);
+
         }
         else{
                    nuevaPersona.estaLibre = 0;
                    nuevaPersona.DNI = DNI;
 
-                   printf("Ingrese nombre: ");
-                   fflush(stdin);
-                   scanf("%[^\n]",nuevaPersona.nombre);
-                   //gets(nuevoEmpleado.nombre);
+                if (!getStringLetras("Ingrese el nombre: ",nombreAux))
+                 {
+                  printf ("El nombre deben ser letras \n");
 
-                   printf("Ingrese edad: ");
-                   scanf("%d", &nuevaPersona.edad);
-                   while(nuevaPersona.edad<0 || nuevaPersona.edad>120)
-                   {
-                   printf("Rengrese edad: ");
-                   scanf("%d", &nuevaPersona.edad);
-                   }
+                 while(!getStringLetras("Reingrese el Nombre: ",nombreAux))
+                  {
+                      printf("NO INGRESE NUMEROS ");
 
-                   printf("Ingrese DNI: ");
-                   scanf("%lld", &nuevaPersona.DNI);
+                  }
 
+                  }
+
+                   strcpy(nuevaPersona.nombre,(strlwr(nombreAux)));
+
+
+
+                if (!getStringNumeros("Ingrese la edad: ",edadAuxStr))
+             {
+                while(!getStringNumeros("Reingrese la edad: ",edadAuxStr))
+                  {
+                      printf("NO INGRESE LETRAS ");
+
+                  }
+             }
+
+                nuevaPersona.edad = atoi(edadAuxStr);
+
+             while(nuevaPersona.edad <0 || nuevaPersona.edad >= 110)
+             {
+                 printf("POR FAVOR LA EDAD DEBE SER MENOR A 0 Y MAYOR A 100: ");
+                 scanf("%d",&nuevaPersona.edad);
+             }
 
 
                    gente[indice] = nuevaPersona;
@@ -140,6 +178,7 @@ void altaPersona(struct Epersona gente[], int cantidad)
                    printf("\nAlta exitosa!!!\n\n");
 
            }
+
   }
 
 }
