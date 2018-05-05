@@ -109,14 +109,15 @@ void altaPersona(struct Epersona gente[], int cantidad)
     }
     else
     {
-       if (!getStringNumeros("Ingrese el Dni: ",dniAuxStr))
-        {
+       if ((!getStringNumeros("Ingrese el DNI: ",dniAuxStr)) || (strlen(dniAuxStr)>8))
 
-            printf ("El dni debe ser numerico\n");
+      {
 
-                while(!getStringNumeros("Reingrese el Dni: ",dniAuxStr))
+            printf ("El DNI debe ser numerico y menor a 8 caracteres\n");
+
+                while((!getStringNumeros("Reingrese el DNI: ",dniAuxStr)) || (strlen(dniAuxStr)>8))
                   {
-                      printf("NO INGRESE LETRAS ");
+                      printf("NO INGRESE LETRAS ni mas de 8 caracteres");
 
                   }
 

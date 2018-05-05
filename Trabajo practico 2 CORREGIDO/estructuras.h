@@ -8,7 +8,10 @@ podiendo ingresar su DNI , NOMBRE , EDAD , y nuevamente su DNI ya que el primer 
 sera para verificar que ese DNI no este repetido. Luego se podran eliminar de el programa a la persona
 que se quiera eliminar , mostrando a esta persona para no cometer errores. Luego mostrara a las personas
 ordenadas por nombre y finalmente mostrar un grafico que tendra en cuenta si las personas ingresadas
-tienen menos de 18 , tienen de 19 a 35 o tienen mas de 35 años.*/
+tienen menos de 18 , tienen de 19 a 35 o tienen mas de 35 años.
+Validaciones a tener en cuenta: En el DNI el usuario NO podra ingresar mas de 8 caracteres , NI letras.
+                                En el NOMBRE no se podran ingresar NUMEROS. Luego figuraran en MINUSCULA.
+                                En la edad no se podra ingresar un numero mayor a 120 ni menor a 0. NI letras.*/
 
 
 
@@ -16,7 +19,7 @@ tienen menos de 18 , tienen de 19 a 35 o tienen mas de 35 años.*/
 
 struct Epersona{
                char nombre [71];
-               char edad;
+               int edad;
                long long int DNI;
                int estaLibre;
                };
